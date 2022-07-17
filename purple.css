@@ -1,0 +1,244 @@
+/* 
+    COLOR PALETTE
+
+    PURPLES
+    
+    BROWN/PURPLE
+    --purple: #592C56;
+    --white: #ffffff;
+    --beige: #F2CBBD;
+    --peach: #BF7C63;
+    --mbrown: #592C22;
+    --dbrown: #261511;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --lav: #8F8EBF;
+    --section: #4F4D8C;
+    --background: #1b153f;
+    --dpurple: #332e57;
+    --nav: #3a587c;
+    --footer: #18283b;
+    --black: #262626;
+    --font: #ffffff;
+
+    /* gradient */
+    --colorone: #2e0e2e;
+    --colortwo: #190d31;
+    --colorthree: #13243b;
+    --colorfour: #261236;
+}
+
+
+
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 0.9vw;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: var(--font);
+    display: flex;
+    flex-direction: column;
+
+	background: linear-gradient(-45deg, var(--colorone), var(--colortwo), var(--colorthree), var(--colorfour));
+    background-size: 4000% 4000%;
+	animation: gradient 15s ease infinite;
+	height: 100%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.project-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #34335e;
+    padding: 5px 8px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+
+.project-link:hover {
+    background-color: #403f6e;
+}
+
+
+
+/*  NAV BAR */
+.nav-bar {
+    background: var(--nav);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 3px 3px 10px 2px #121212;
+}
+
+#name {
+    float: left;
+    font-size: 2rem;
+    transform: translateY(35%);
+    padding: 0 1.5rem;
+}
+
+.nav-bar ul {
+    display: flex;
+    padding: 1em 0.7em;
+    flex-wrap: wrap;
+    float: right;
+}
+
+.nav-bar a {
+    color: var(--font);
+    text-align: center;
+    padding: 0.729vw;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.nav-bar a:hover {
+    transform:scale(1.1);
+}
+
+/*  JUMPS  */
+.jump {
+    height: 5rem;
+}
+
+
+/* AUDIO CONTROLS - https://blog.shahednasser.com/how-to-style-an-audio-element/ */
+
+/*  SECTIONS */
+section {
+    background: var(--section);
+    border-radius: 15px;
+    margin: 2.5rem 15rem; 
+    box-shadow: 5px 5px 10px 3px #121212;
+}
+
+section .content-left, section .content-right {
+    display: flex;
+    flex-basis: row nowrap;
+    padding: 5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+section .content-right {
+    flex-direction: row-reverse;
+}
+
+.content-left .con-text, .content-left .con-img, 
+.content-right .con-text, .content-right .con-img {
+    width: 50%;
+    padding: 1.5em;
+}
+
+/* section text formatting */
+.content-left h1, .content-right h1 {
+    line-height: 2.5em;
+    font-size: 2.3rem;
+}
+
+.content-left h3, .content-right h3 {
+    line-height: 2em;
+}
+
+.content-left p, .content-right p {
+    line-height: 1.8em;
+} 
+
+#home-content h1 {
+    font-size: 48px; 
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.content-left .con-text {
+    text-align: left;
+}
+
+.content-right .con-text {
+    text-align: right;
+}
+
+/* resume embed */
+#resume-content .con-text {
+    width: 70%;
+    padding: 1.5em;
+}
+
+#resume-content .con-img {
+    width: 40%;
+    padding: 1.5em;
+}
+
+.con-text iframe{
+    min-width: 100%;
+    min-height: 30rem;
+    border: 1.5px solid var(--background);
+}
+
+
+/* contact */
+#contact-content .con-text {
+    text-align: center;
+}
+
+.fa-icon-link {
+    font-size: 2em;
+    color: var(--font);
+    text-decoration: none;
+    margin: 0.3em;
+}
+
+.fa-icon-link i:hover{
+    transform:scale(1.1);
+}
+
+
+/*  FOOTER  */
+footer {
+    background: var(--footer);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        font-size: 10vw;
+    }
+    
+}
+
+
